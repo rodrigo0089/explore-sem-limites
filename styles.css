@@ -1,0 +1,247 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+  --base-font: 'Mulish', sans-serif;
+
+  --white: #ffffff;
+  --light-gray: #f9f4fb;
+  --accent-color: #b52184;
+  --text-base-color: #312d64;
+  --gradient-background: linear-gradient(96.21deg, #343193 0%, #302c63 99.68%);
+}
+
+body{
+ background: var(--light-gray);
+ font-family: var(--base-font);
+}
+
+/* header img {
+  width: 100%;
+} */
+header {
+  padding: 0 3.4rem 9.3rem 3.2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  font-weight: 900;
+  color: var(--accent-color);
+  margin: 1.7rem 0 0.5rem 0;
+}
+
+h2 {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  font-weight: 900;
+  color: var(--accent-color);
+}
+
+h3 {
+  font-size: 2.9rem;
+  line-height: 3.6rem;
+  font-weight: 900;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: var(--text-base-color);
+}
+
+header p {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  color: var(--text-base-color);
+  margin-bottom: 3.5rem;
+}
+
+button,
+input,
+fieldset,
+textarea {
+  border: none;
+  background: none;
+  font-family: var(--base-font);
+}
+
+#cards {
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-background);
+  padding: 5.3rem 3.9rem 5.5rem;
+  display: grid;
+  gap: 4.9rem;
+}
+
+#cards .card {
+  background: var(--white);
+  padding: 2.6rem;
+  border-radius: 2rem;
+}
+
+#cards .card img {
+  width: 8rem;
+  margin-bottom: 3.3rem;
+}
+
+#cards .card .card-text {
+  width: 26.5rem;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  padding: 7.8rem 3.9rem 6.5rem;
+}
+
+form h2 {
+  margin-bottom: 4.3rem;
+}
+
+form .input-wrapper {
+  margin-bottom: 2.4rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: 0.15rem solid var(--text-base-color);
+  border-radius: 1.6rem;
+  padding: 1.2rem 1.6rem 1.6rem;
+  color: var(--text-base-color);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+form textarea {
+  height: 12.6rem;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: var(--text-base-color);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+form input::placeholder {
+  padding-left: 2.8rem;
+}
+
+form button {
+  background: var(--gradient-background);
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  padding: 1rem 1.6rem;
+  border-radius: 1.6rem;
+  cursor: pointer;
+  transition: filter 200ms;
+  }
+  
+  form button:hover {
+    filter: brightness(0.7);
+  }
+  
+  #name {
+    background: url(./assets/person.svg) no-repeat scroll 1.4rem 1.2rem;
+  }
+  
+  #email {
+    background: url(./assets/mail.svg) no-repeat scroll 1.4rem 1.2rem;
+  }
+
+  footer {
+    background: var(--gradient-background);
+  
+    padding: 3.2rem 1.6rem;
+  }
+  
+  footer p {
+    color: var(--white);
+    font-size: 1.9rem;
+    line-height: 2.4rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  @media (min-width: 700px) {
+    h1 {
+      font-size: 5.8rem;
+      line-height: 7.3rem;
+      margin: 0 0 0.8rem;
+    }
+    header{
+      display: grid;
+      grid-template-areas: 
+      "text img"
+      "button img";
+    }
+
+    text-header {
+     grid-area: text;
+    }
+
+    .astronaut {
+      grid-area: img;
+      margin-left: 10rem;
+    }
+
+    .button-down {
+      grid-area: button;
+      margin-bottom: -10rem;
+    }
+
+    #cards {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .card img {
+     width: 9.7rem;
+     margin-bottom: 4rem;
+    }
+
+    .hide {
+      display: flex;
+    }
+
+    #contact {
+      display: flex;
+      align-items: center;
+      gap: 9.2rem;
+      padding: 0;
+      height: 62.2rem;
+      margin: 0 auto;
+      background: url(./assets/stars.svg);
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+    #contact form {
+      flex: 1;
+      margin-left: 10.9rem;
+    }
+    #contact .stars {
+      flex: 1;
+    }
+  }
